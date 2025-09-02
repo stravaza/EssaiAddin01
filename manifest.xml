@@ -21,7 +21,7 @@
   </AppDomains>
 
   <Hosts>
-    <Host Name="Document"/>
+    <Host Name="Word"/>
   </Hosts>
 
   <DefaultSettings>
