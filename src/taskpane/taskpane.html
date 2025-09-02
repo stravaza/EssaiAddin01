@@ -1,87 +1,25 @@
-<!doctype html>
-<html lang="fr">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contrôle de soulignement</title>
-
-    <!-- Office.js -->
-    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-
-        #app-body {
-            display: none;
-            flex-direction: column;
-            padding: 16px;
-            gap: 12px;
-        }
-
-        button {
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #f0f0f0;
-        }
-
-        .title {
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .hint {
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        .card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 10px;
-            background: #fafafa;
-        }
-
-        #result {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <title>Exercice Word</title>
+  <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #app-body { display: none; flex-direction: column; gap: 10px; }
+    button { padding: 6px 12px; border-radius: 6px; border: none; background: #0078d7; color: white; cursor: pointer; }
+    button:hover { background: #005a9e; }
+    #result { font-weight: bold; margin-top: 10px; }
+  </style>
 </head>
-
 <body>
-    <!-- Message affiché tant que Office n’est pas prêt -->
-    <div id="sideload-msg">
-        Ouvre ce complément dans Word pour activer l’interface.
-    </div>
-
-    <!-- Corps de l’app -->
-    <div id="app-body">
-        <div class="title">Contrôle de soulignement</div>
-        <div class="hint">Souligne dans Word les mots suivants :</div>
-
-        <!-- Affichage des mots ciblés -->
-        <div id="target-words" class="card"></div>
-
-        <button id="insert" type="button">Insérer le texte d'exercice</button>
-        <button id="check" type="button">Contrôler les mots soulignés</button>
-
-
-        <!-- Résultat du contrôle -->
-        <div id="result"></div>
-    </div>
-
-    <!-- Ton script -->
-    <script src="./taskpane.js"></script>
+  <div id="sideload-msg">Charge l’add-in dans Word…</div>
+  <div id="app-body">
+    <p>Mots à surligner en jaune (stabilo) : <span id="target-words"></span></p>
+    <button id="insert">Insérer le texte</button>
+    <button id="check">Contrôler</button>
+    <div id="result"></div>
+  </div>
+  <script src="taskpane.js"></script>
 </body>
-
 </html>
