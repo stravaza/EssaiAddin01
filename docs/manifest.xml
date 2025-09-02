@@ -94,7 +94,7 @@
 
       <bt:LongStrings>
         <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded successfully. Go to the HOME tab and click the 'Show Task Pane' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Cliquez pour démarer"/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Cliquez pour démarer "/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
